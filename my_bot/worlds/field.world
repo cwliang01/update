@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<sdf version="1.5">
+
+  <world name="default">
+
+    <include>
+      <uri>model://ground_plane</uri>
+    </include>
+
+    <include>
+      <uri>model://sun</uri>
+    </include>
+
+    <scene>
+      <ambient>0.4 0.4 0.4 1</ambient>
+      <background>0.25 0.25 0.25 1</background>
+      <shadows>false</shadows>
+    </scene>
+
+    <light type="directional" name="some_light">
+      <diffuse>0.7 0.7 0.7 1</diffuse>
+      <specular>1 1 1 1</specular>
+      <direction>-1 -1 -1</direction>
+    </light>
+
+    <include>
+      <!--need to put pose, static and other things in front of uri, otherwise those will not be reflected on the model-->
+      <pose>0 0 0 0 -1.571 0</pose>
+      <static>true</static>    
+      <uri>model://field</uri>
+    </include>
+  
+  </world>
+
+</sdf>
