@@ -1,4 +1,6 @@
 import os
+import launch_ros
+import launch
 
 from ament_index_python.packages import get_package_share_directory
 
@@ -18,6 +20,10 @@ def generate_launch_description():
     # !!! MAKE SURE YOU SET THE PACKAGE NAME CORRECTLY !!!
 
     package_name='my_bot' #<--- CHANGE ME
+
+    pkg_share = launch_ros.substitutions.FindPackageShare(package=package_name).find(package_name)
+    world_path=os.path.join(pkg_share, 'worlds/obstacles.sdf')
+
 
     rsp = IncludeLaunchDescription(
                 PythonLaunchDescriptionSource([os.path.join(
@@ -42,6 +48,6 @@ def generate_launch_description():
     # Launch them all!
     return LaunchDescription([
         rsp,
-        gazebo,
+        launch.actions.ExecuteProcess(cmd=['gazebo', '--verbose', '-s', 'libgazebo_ros_init.so', '-s', 'libgazebo_ros_factory.so', world_path], output='screen'),
         spawn_entity,
     ])

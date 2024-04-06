@@ -15,7 +15,7 @@
             </material>
             <geometry>
             <mesh>
-                <uri>meshes/field.stl</uri>
+                <uri>meshes/field.STL</uri>
                 <scale>0.001 0.001 0.001</scale>
                 </mesh>
             </geometry>
@@ -23,7 +23,7 @@
         <collision name='fieldcollision'>
             <geometry>
             <mesh>
-                <uri>meshes/field.stl</uri>
+                <uri>meshes/field.STL</uri>
                 <scale>0.001 0.001 0.001</scale> 
                 </mesh>
             </geometry>
