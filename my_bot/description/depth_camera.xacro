@@ -16,6 +16,7 @@
         </visual>
     </link>
 
+
     <joint name="camera_optical_joint" type="fixed">
         <parent link="camera_link"/>
         <child link="camera_link_optical"/>
@@ -50,16 +51,6 @@
                 <min_depth>0.1</min_depth>
                 <max_depth>100.0</max_depth>
             </plugin>
-            <!-- <plugin name="depth_camera_controller" filename="libgazebo_ros_camera.so">
-                <baseline>0.2</baseline>
-                ...
-                <ros>
-                    <imageTopicName>[your color image topic]</imageTopicName>
-                    <cameraInfoTopicName>[your camera info topic]</cameraInfoTopicName>
-                    <depthImageTopicName>[your depth image topic]</depthImageTopicName>
-                    <pointCloudTopicName>[your point cloud topic]</pointCloudTopicName>
-                </ros>
-            </plugin> -->
         </sensor>
     </gazebo>
 
