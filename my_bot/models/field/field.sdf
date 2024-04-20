@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<sdf version="1.4">
+<sdf version="1.7">
     <model name="field">
         <link name="body">
         <visual name="visual">
@@ -15,7 +15,7 @@
             </material>
             <geometry>
             <mesh>
-                <uri>meshes/field.STL</uri>
+                <uri>meshes/field.stl</uri>
                 <scale>0.001 0.001 0.001</scale>
                 </mesh>
             </geometry>
@@ -23,7 +23,7 @@
         <collision name='fieldcollision'>
             <geometry>
             <mesh>
-                <uri>meshes/field.STL</uri>
+                <uri>meshes/field.stl</uri>
                 <scale>0.001 0.001 0.001</scale> 
                 </mesh>
             </geometry>

@@ -34,7 +34,7 @@ endif()
 
 install(
   DIRECTORY config description launch worlds
-  DESTINATION share/my_bot
+  DESTINATION share/${PROJECT_NAME}
 )
 
 ament_package()
